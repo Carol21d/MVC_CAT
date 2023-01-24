@@ -73,9 +73,11 @@ public class Cat {
     }
 
     public CatPayload save(CatPayload cat) throws SQLException {
-
+    // creamos nuestro insert into cats decimos pasa name owner breed con este values en ?
         String sql_insert = "INSERT INTO cats (name,owner,breed) VALUES (?,?,?)";
+  // igualamos preparedStatement 
         PreparedStatement preparedStatement = repository.conn.prepareStatement(sql_insert);
+        // aqui le decimos que en primer parametro index 1 consigue el nombre de cat
         preparedStatement.setString(1, cat.getName());
         preparedStatement.setString(2, null);
         preparedStatement.setString(3, null);

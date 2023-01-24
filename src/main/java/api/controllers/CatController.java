@@ -52,7 +52,7 @@ public class CatController extends HttpServlet {
 
         try {
             Object cat = catService.store(req.getReader());
-            out.println(View.show(cat));
+            out.println(View.show(cat));//nos muestra el gato con este comando
             resp.setStatus(HttpServletResponse.SC_CREATED);//status de que fue creado
         } catch (Exception e) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
