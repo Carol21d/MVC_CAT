@@ -85,14 +85,16 @@ public class Cat {
         preparedStatement.close();
 
         Statement statement = repository.conn.createStatement();
+        //sentencia de sql donde sleccionamos de tabla en orden descendiente por id_cat
         String sql = String.format("SELECT * FROM %s ORDER BY id_cat DESC LIMIT 1", table);
+        //regresame el resultado
         ResultSet rs = statement.executeQuery(sql);
-
+  // colocamos este bucle que nos podra el id.cat y nombre que cada vez que haya un elemento
         while (rs.next()) {
             cat.setId(rs.getLong("id_cat"));
             cat.setName(rs.getString("name"));
         }
-        
+         
         return cat;
     }
 }
