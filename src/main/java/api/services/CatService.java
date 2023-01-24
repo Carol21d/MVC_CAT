@@ -13,7 +13,7 @@ public class CatService implements InterfaceService {
     
     private Cat cat;
     private Gson gson;//declramos para usarlo
-
+    // declaramos el constructor y lo instaciamos
     public CatService() {
         this.cat = new Cat();
         this.gson = new Gson();
