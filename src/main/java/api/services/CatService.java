@@ -12,7 +12,7 @@ import api.payloads.CatPayload;
 public class CatService implements InterfaceService {
     
     private Cat cat;
-    private Gson gson;
+    private Gson gson;//declramos para usarlo
 
     public CatService() {
         this.cat = new Cat();

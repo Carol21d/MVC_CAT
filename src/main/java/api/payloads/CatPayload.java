@@ -1,7 +1,7 @@
 package api.payloads;
 
 public class CatPayload {
-    
+    // siempre tiene que haber un payload donde solo habra getter y setter y constructor para acceder a ello  y que no hya conflicto
     private Long id;
     private String name;
 
